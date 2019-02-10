@@ -34,6 +34,7 @@ class MainActivity : AppCompatActivity() {
         contactList.setOnItemLongClickListener { parent, view, position, id ->
             contactos.deleteContact(position)
             adapter.notifyDataSetChanged()
+            contactos.refreshData(contactList)
             val toastEliminado = Toast.makeText(applicationContext, "Se ha eliminado el contacto", Toast.LENGTH_LONG)
             toastEliminado.show()
             true

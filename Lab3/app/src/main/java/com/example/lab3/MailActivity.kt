@@ -1,4 +1,4 @@
-package com.example.lab3
+/**package com.example.lab3
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
@@ -35,3 +35,4 @@ class MailActivity : AppCompatActivity() {
 
     }
 }
+**/
