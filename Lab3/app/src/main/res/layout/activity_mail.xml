@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MailActivity">
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/fromInput"
+            android:hint="De:" app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="41dp"
+            android:layout_marginStart="41dp" android:layout_marginTop="41dp"
+            app:layout_constraintTop_toTopOf="parent"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/toInput"
+            android:hint="Para:" app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="41dp"
+            android:layout_marginStart="41dp" android:layout_marginTop="59dp"
+            app:layout_constraintTop_toBottomOf="@+id/fromInput"/>
+    <EditText
+            android:layout_width="313dp"
+            android:layout_height="174dp"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/messageInput"
+            android:hint="Mensaje" app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="52dp"
+            android:layout_marginStart="52dp" android:layout_marginTop="36dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView2"/>
+    <TextView
+            android:text="Mensaje"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2" app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="40dp"
+            android:layout_marginStart="40dp" android:layout_marginTop="72dp"
+            app:layout_constraintTop_toBottomOf="@+id/toInput"/>
+    <Button
+            android:text="Enviar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonSend" app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="160dp"
+            android:layout_marginStart="160dp"
+            android:layout_marginTop="33dp" app:layout_constraintTop_toBottomOf="@+id/messageInput"/>
+</android.support.constraint.ConstraintLayout>
