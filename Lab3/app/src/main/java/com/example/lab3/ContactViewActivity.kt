@@ -35,7 +35,11 @@ class ContactViewActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-
+        val botonEditar = findViewById<Button>(R.id.editButton)
+        botonEditar.setOnClickListener {
+            val intent = Intent(this, EditContactActivity::class.java)
+            startActivity(intent)
+        }
 
         currentNum.setOnClickListener {
             val intent = Intent(Intent.ACTION_DIAL)

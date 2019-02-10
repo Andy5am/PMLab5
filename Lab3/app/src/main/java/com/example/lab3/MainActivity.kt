@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.ListView
+import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
 
@@ -32,6 +33,10 @@ class MainActivity : AppCompatActivity() {
 
         contactList.setOnItemLongClickListener { parent, view, position, id ->
             contactos.deleteContact(position)
+            adapter.notifyDataSetChanged()
+            val toastEliminado = Toast.makeText(applicationContext, "Se ha eliminado el contacto", Toast.LENGTH_LONG)
+            toastEliminado.show()
+            true
         }
     }
 }

@@ -29,7 +29,7 @@ class MyApplication: Application() {
         db.addContact(contact)
     }
 
-    fun updateContact(edt_id: EditText, edt_nombre: TextView, edt_telefono: EditText, edt_correo: EditText) {
+    fun updateContact(edt_id: TextView, edt_nombre: TextView, edt_telefono: TextView, edt_correo: TextView) {
         val contact = Contact (
             Integer.parseInt(edt_id.text.toString()),
             edt_nombre.text.toString(),

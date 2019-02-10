@@ -12,6 +12,8 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+        <activity android:name=".EditContactActivity">
+        </activity>
         <activity android:name=".MailActivity">
         </activity>
         <activity android:name=".ContactViewActivity">
