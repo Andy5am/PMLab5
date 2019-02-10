@@ -19,7 +19,7 @@ class ContactViewActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_contact_view)
 
-        val contactos = (this.application as MyApplication).getContacts()
+        val contactos = (this.application as MyApplication)
 
         val currentName = findViewById<TextView>(R.id.nameText)
         val currentNum = findViewById<TextView>(R.id.phoneText)
@@ -36,20 +36,7 @@ class ContactViewActivity : AppCompatActivity() {
         }
 
 
-        //No funciona el permission, no esta usando lo que se importo
-        /**currentNum.setOnClickListener(View.OnClickListener {
-        val callIntent = Intent(Intent.ACTION_CALL)
-        callIntent.data = Uri.parse("tel:${currentNum.text}")
 
-        if (ActivityCompat.checkSelfPermission(
-        this@ContactViewActivity,
-        CALL_PHONE
-        ) != PackageManager.PERMISSION_GRANTED
-        ) {
-        return@OnClickListener
-        }
-        startActivity(callIntent)
-        })**/
         currentNum.setOnClickListener {
             val intent = Intent(Intent.ACTION_DIAL)
             intent.data = Uri.parse("tel:" + currentNum.text.toString())

@@ -17,16 +17,21 @@ class MainActivity : AppCompatActivity() {
         botonNewContact.setOnClickListener{val intent = Intent(this,NewContactActivity::class.java)
             startActivity(intent)}
 
-        val contactos:MyContacts = (this.application as MyApplication).getContacts()
+        val contactos = (this.application as MyApplication)
 
         val contactList = findViewById<ListView>(R.id.contactList)
-        val adapter = ArrayAdapter(this,android.R.layout.simple_list_item_1,contactos.contactos)
+        val adapter = ArrayAdapter(this,android.R.layout.simple_list_item_1,contactos.getContacts())
         contactList.adapter = adapter
+        contactos.refreshData(contactList)
 
         contactList.setOnItemClickListener { parent, view, position, id ->
-            contactos.currentContact= contactos.contactos.get(position)
+            contactos.currentContact= contactos.getContacts().get(position)
             val intent = Intent(this,ContactViewActivity::class.java)
             startActivity(intent)
+        }
+
+        contactList.setOnItemLongClickListener { parent, view, position, id ->
+            contactos.deleteContact(position)
         }
     }
 }

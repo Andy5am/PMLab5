@@ -6,8 +6,8 @@ class MyContacts {
     lateinit var currentContact: Contact
 
 
-    fun createAndAddContact(nombre:String, telefono:String,correo:String){
-        val contacto = Contact(nombre,telefono,correo)
+    fun createAndAddContact(id:Int,nombre:String, telefono:String,correo:String){
+        val contacto = Contact(id,nombre,telefono,correo)
         contactos.add(contacto)
     }
 
